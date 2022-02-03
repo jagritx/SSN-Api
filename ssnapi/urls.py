@@ -17,10 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from api import views
 
+
+#usage:host:{portname}/{urlpattern}
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('newperson',views.add_person),
     path('details/<int:id>',views.get_details),
+    #Example: localhost:5500/details/24567431249586
     path('delete/<int:id>',views.delete_person),
 
 ]
